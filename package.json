@@ -1,0 +1,41 @@
+{
+  "name": "@fusionstrings/rollup-react-ssr",
+  "version": "1.0.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/module/index.js",
+  "browser": "dist/umd/index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "dev": "cross-env NODE_ENV=development rollup -c",
+    "build": "cross-env NODE_ENV=production rollup -c",
+    "serve": "cross-env NODE_ENV=production node index.js",
+    "serve:dev": "cross-env NODE_ENV=development node index.js",
+    "serve-bs": "browser-sync start -s 'dist' -f 'dist' --port 9090"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.34",
+    "express": "^4.16.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.34",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.34",
+    "@babel/plugin-transform-arrow-functions": "^7.0.0-beta.34",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.34",
+    "@babel/preset-env": "^7.0.0-beta.34",
+    "@babel/preset-react": "^7.0.0-beta.34",
+    "browser-sync": "^2.18.13",
+    "cross-env": "^5.1.1",
+    "dotenv": "^4.0.0",
+    "rollup": "^0.52.1",
+    "rollup-analyzer-plugin": "^1.1.1",
+    "rollup-plugin-babel": "^4.0.0-beta.0",
+    "rollup-plugin-babel-minify": "^3.1.2",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-multi-entry": "^2.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^2.0.0"
+  }
+}
